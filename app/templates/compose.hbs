@@ -1,0 +1,23 @@
+<form onsubmit={{action "composeEmail"}}>
+	<div>
+		<label for="from">From</label>
+		{{input type="text" id="from" value=from}}
+	</div>
+	<div>
+		<label for="to">To</label>
+		{{input type="text" id="to" value=to}}
+	</div>
+	<div>
+		<label for="subject">Subject</label>
+		{{input type="text" id="subject" value=subject}}
+	</div>
+	<div>
+		<label for="message">Message</label>
+		{{textarea row="8" cols="80" id="messge" value=message}}
+	</div>
+
+	<button type="submit">Send</button> 
+
+
+</form>
+{{outlet}}

@@ -1,0 +1,13 @@
+
+{{#each model as |email|}}
+<div style="padding: 10px">
+From: <label >{{email.from}}</label>
+<div class="truncate">
+	{{#link-to "email" email.id}}
+		{{email.message}}
+	{{/link-to}}
+
+</div>
+</div>
+{{/each}}
+{{outlet}}
