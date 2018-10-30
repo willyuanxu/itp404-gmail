@@ -2,8 +2,9 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
 	actions: {
-		star(){
-			console.log("starred");
+		star(email, starred){
+			email.set('starred', starred);
+			email.save();
 		}
 	}
 });

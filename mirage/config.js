@@ -18,6 +18,7 @@ export default function() {
     this.get('/emails');
     this.get('/emails/:id');
     this.post('/emails');
+    this.patch('/emails/:id');
     this.del('/emails/:id');
   
 }

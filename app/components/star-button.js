@@ -8,13 +8,6 @@ export default Component.extend({
 		this.set('buttonText', "one");
 	},
 	click(){
-		this.set('buttonText', this.starredText);
-		if (this.starred){
-			this.set('starred', false);
-		} else {
-			this.set('starred', true);
-		}
-		
-		this.onClick();
+		this.onClick(!this.starred);
 	}
 });

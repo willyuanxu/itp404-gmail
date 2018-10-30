@@ -1,9 +1,10 @@
 
+<h5>Starred</h5>
 {{#each model as |email|}}
 <div style="padding: 10px">
 	From: <label >{{email.from}}</label> 
-	<StarButton @starred={{starred}} @onClick={{action "star"}}>
-		{{#if starred}}
+	<StarButton class="starbutton" @starred={{email.starred}} @onClick={{action "star" email}}>
+		{{#if email.starred}}
 		<span class="fa fa-star checked"></span>
 		{{else}}
 		<span class="fa fa-star"></span>
@@ -17,4 +18,5 @@
 	</div>
 </div>
 {{/each}}
+
 {{outlet}}
