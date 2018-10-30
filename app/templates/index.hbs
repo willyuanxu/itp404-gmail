@@ -3,14 +3,7 @@
 {{#each model as |email|}}
 <div style="padding: 10px">
 	From: <label >{{email.from}}</label> 
-	<StarButton class="starbutton" @starred={{email.starred}} @onClick={{action "star" email}}>
-		{{#if email.starred}}
-		<span class="fa fa-star checked"></span>
-		{{else}}
-		<span class="fa fa-star"></span>
-		{{/if}}
-
-	</StarButton>
+	<StarButton  @starred={{email.starred}} @onClick={{action "star" email}}/>
 	<div >
 		{{#link-to "email" email.id}}
 			{{truncate-text email.message 60}}
