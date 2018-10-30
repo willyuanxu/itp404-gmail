@@ -11,8 +11,6 @@ export default Component.extend({
 		this.set('isStarred', this.starred)
 	},
 	click(){
-		this.onClick(!this.starred).then(() => {
-			this.set('isStarred', this.starred);
-		});
+		this.onClick(!this.starred);
 	}
 });

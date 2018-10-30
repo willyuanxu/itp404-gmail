@@ -1,15 +1,18 @@
 
 <h5>Starred</h5>
 {{#each model as |email|}}
-<div style="padding: 10px">
-	From: <label >{{email.from}}</label> 
-	<StarButton  @starred={{email.starred}} @onClick={{action "star" email}}/>
-	<div >
-		{{#link-to "email" email.id}}
-			{{truncate-text email.message 60}}
-		{{/link-to}}
-	</div>
-</div>
+{{#if email.starred}}
+<EmailDisplay @email={{email}} @star={{action 'star'}}/>
+{{else}}
+{{/if}}
+{{/each}}
+<h5>Others</h5>
+{{#each model as |email|}}
+{{#if email.starred}}
+
+{{else}}
+<EmailDisplay @email={{email}} @star={{action 'star'}}/>
+{{/if}}
 {{/each}}
 
 {{outlet}}

@@ -1,0 +1,8 @@
+From: <label >{{email.from}}</label> 
+<StarButton  @starred={{email.starred}} @onClick={{action "star" email}}/>
+<div >
+	{{#link-to "email" email.id}}
+		{{truncate-text email.message 60}}
+	{{/link-to}}
+</div>
+{{yield}}
