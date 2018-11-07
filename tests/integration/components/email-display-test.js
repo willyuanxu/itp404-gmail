@@ -12,15 +12,7 @@ module('Integration | Component | email-display', function(hooks) {
 
     await render(hbs`{{email-display}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'From:');
 
-    // Template block usage:
-    await render(hbs`
-      {{#email-display}}
-        template block text
-      {{/email-display}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

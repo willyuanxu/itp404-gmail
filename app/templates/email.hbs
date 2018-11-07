@@ -1,8 +1,8 @@
-<button onclick={{action 'backToInbox'}}>Back</button>
-<a onclick={{action 'deleteEmail' model}}>
-     <span class="glyphicon glyphicon-trash"></span>
- </a>
-<h3>{{model.subject}}</h3>
-<p>From: {{model.from}}</p>
-<p>To: {{model.to}}</p>
-<p>{{model.message}}</p>
+<button onclick={{action "backToInbox"}}>Back</button>
+<button data-test="delete-email" onclick={{action "deleteEmail" model}}>
+  <span class="glyphicon glyphicon-trash"></span>
+</button>
+<h3 data-test="email-subject">{{model.subject}}</h3>
+<p data-test="email-from">From: {{model.from}}</p>
+<p data-test="email-to">To: {{model.to}}</p>
+<p data-test="email-message">{{model.message}}</p>

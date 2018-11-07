@@ -8,5 +8,15 @@
 }
 
 .email{
-	"padding: 10px";
+	padding: 10px;
+}
+
+.nav{
+	display: table-cell;
+	padding: 10px;  
+	height:100%;
+}
+
+.right-side{
+	display: table-cell;
 }
